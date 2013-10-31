@@ -118,10 +118,17 @@ vector<int> matrix_counter(Matriz a){
 
 int main()
 {   
+    srand(time(0));
     Matriz a(16,30);
     a.show();
     
     vector<int> v=matrix_counter(a);
+    string letters = "abcdefghij";
+    for (int i = 0; i < 10; ++i)
+    {
+        cout<<letters[i]<<":"<<v[i]<<endl;
+    }
+    
     
     
 }

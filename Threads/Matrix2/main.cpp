@@ -5,25 +5,43 @@
 #include <thread>
 
 using namespace std;
+
+class Row{
+public:
+    char* content;
+    int size;
+    string letters;
+    Row(int N){
+        letters="abcdefghij";        
+        size = (rand()%N)+1;
+        content = new char[size];
+        for (int i = 0; i < size; ++i)
+        {
+            content[i] = letters[rand()%letters.length()];
+        }
+
+    }
+    ~Row(){
+        //delete[] content;
+    }
+    void show(){
+        for (int i = 0; i < size; ++i)
+        {
+            cout<<content[i]<<" ";
+        }
+        cout<<endl;
+    }
+};
 class Matriz{
 public:    
-    char** mat;
+    vector<Row> content;
     int n;
-    int m;
-    string letters;
-    Matriz(int rows,int columns){
-        n=rows;
-        m=columns;
-        letters="abcdefghij";        
-        mat=new char*[n];
+    Matriz(int rows){
+        n = rows;
+
         for(int i=0;i<n;++i){
-            mat[i]=new char[m];
-        }
-        for(int i=0;i<n;++i){
-            for(int j=0;j<m;++j){
-                mat[i][j]=letters[rand()%letters.length()];
-            }
-    
+            Row tmp (n);
+            content.push_back(tmp);
         }
     }
     ~Matriz(){
@@ -35,22 +53,20 @@ public:
     void show(){
         cout<<endl<<endl;
         for (int i = 0; i < n; ++i){   
-            for (int j = 0; j < m; ++j){
-                cout<<mat[i][j];
-            }
-            cout<<endl;
+            content[i].show();
         }
         cout<<endl<<endl;
 
     }
 };
 
-void sub_counter(char** mat, int init, int fin, int M,vector<int>* ans){
+
+void sub_counter(vector<Row>& mat, int init, int fin, vector<int>* ans){
     for (int i = init; i < fin ; ++i)
     {
-        for (int j = 0; j < M; ++j)
+        for (int j = 0; j < mat[i].size; ++j)
         {
-            switch(mat[i][j]){
+            switch(mat[i].content[j]){
                 case 'a':
                     ans->at(0)+=1;
                     break;
@@ -98,7 +114,7 @@ vector<int> matrix_counter(Matriz a){
     }
     for (int i = 0; i < cores; ++i)
     {
-        th[i]= thread(sub_counter,a.mat,i*rows_per_core, (i*rows_per_core)+rows_per_core, a.m, &ans[i]);
+        th[i]= thread(sub_counter,a.content,i*rows_per_core, (i*rows_per_core)+rows_per_core, &ans[i]);
     }
 
     for (int i = 0; i < cores; ++i)
@@ -118,15 +134,16 @@ vector<int> matrix_counter(Matriz a){
 
 int main()
 {   
-    Matriz a(16,30);
-    a.show();
-    
-    vector<int> v=matrix_counter(a);
+    srand(time(0));
+    Matriz a(1000000);
+    //a.show();
+    vector<int> v = matrix_counter(a);
     string letters = "abcdefghij";
     for (int i = 0; i < 10; ++i)
     {
         cout<<letters[i]<<":"<<v[i]<<endl;
     }
+    
     
     
 }
