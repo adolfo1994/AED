@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1379639818 source:f:\binarytree\main.cpp
+	<iostream>
+	"include/BinaryTree.h"
+	"include/BinTreeTests.h"
+
+1379637000 f:\binarytree\include\binarytree.h
+	"Traits.h"
+	<iostream>
+
+1379033070 f:\binarytree\include\node.h
+
+1379614972 f:\binarytree\include\traits.h
+	"BinTreeIterator.h"
+
+1379029780 source:h:\binarytree\main.cpp
+	<iostream>
+	"include/BinaryTree.h"
+	"BinTreeTests.h"
+
+1379028978 h:\binarytree\include\binarytree.h
+	"Node.h"
+	"Traits.h"
+	<iostream>
+
+1379025592 h:\binarytree\include\node.h
+
+1379008074 h:\binarytree\include\traits.h
+
+1379029532 h:\binarytree\bintreetests.h
+	<assert.h>
+	"include\BinaryTree.h"
+
+1379033800 f:\binarytree\bintreetests.h
+	<assert.h>
+	"include\BinaryTree.h"
+
+1380222062 f:\binarytree\include\bintreeiterator.h
+	<stack>
+	"Node.h"
+
+1379614646 f:\binarytree\include\bintreetests.h
+	<assert.h>
+	"BinaryTree.h"
+

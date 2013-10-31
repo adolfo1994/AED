@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1381028998 source:f:\avl tree\avltree\main.cpp
+	<iostream>
+	"AVLTests.h"
+
+1381029500 f:\avl tree\avltree\avltree.h
+	"Node.h"
+	"Traits.h"
+	<iostream>
+	<queue>
+
+1380843940 f:\avl tree\avltree\node.h
+
+1380244510 f:\avl tree\avltree\traits.h
+
+1381029194 f:\avl tree\avltree\avltests.h
+	"AVLTree.h"
+	<assert.h>
+
