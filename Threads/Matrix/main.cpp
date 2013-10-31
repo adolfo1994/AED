@@ -45,41 +45,41 @@ public:
     }
 };
 
-void sub_counter(char** mat, int init, int fin, int M,vector<int>& ans){
+void sub_counter(char** mat, int init, int fin, int M,vector<int>* ans){
     for (int i = init; i < fin ; ++i)
     {
         for (int j = 0; j < M; ++j)
         {
             switch(mat[i][j]){
                 case 'a':
-                    ans.at(0)+=1;
+                    ans->at(0)+=1;
                     break;
                 case 'b':
-                    ans.at(1)+=1;
+                    ans->at(1)+=1;
                     break;
                 case 'c':
-                    ans.at(2)+=1;
+                    ans->at(2)+=1;
                     break;
                 case 'd':
-                    ans.at(3)+=1;
+                    ans->at(3)+=1;
                     break;
                 case 'e':
-                    ans.at(4)+=1;
+                    ans->at(4)+=1;
                     break;
                 case 'f':
-                    ans.at(5)+=1;
+                    ans->at(5)+=1;
                     break;
                 case 'g':
-                    ans.at(6)+=1;
+                    ans->at(6)+=1;
                     break;
                 case 'h':
-                    ans.at(7)+=1;
+                    ans->at(7)+=1;
                     break;
                 case 'i':
-                    ans.at(8)+=1;
+                    ans->at(8)+=1;
                     break;
                 case 'j':
-                    ans.at(9)+=1;
+                    ans->at(9)+=1;
                     break;
             }
         }
@@ -98,7 +98,7 @@ vector<int> matrix_counter(Matriz a){
     }
     for (int i = 0; i < cores; ++i)
     {
-        th[i]= thread(sub_counter,a.mat,i*rows_per_core, (i*rows_per_core)+rows_per_core, a.m, ans[i]);
+        th[i]= thread(sub_counter,a.mat,i*rows_per_core, (i*rows_per_core)+rows_per_core, a.m, &ans[i]);
     }
 
     for (int i = 0; i < cores; ++i)
@@ -110,7 +110,7 @@ vector<int> matrix_counter(Matriz a){
     {
         for (int j = 0; j < 10; ++j)
         {
-            v[j]=ans[i][j];
+            v[j]+=ans[i][j];
         }
     }
     return v;
