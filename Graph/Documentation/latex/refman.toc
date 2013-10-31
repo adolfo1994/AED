@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}\discretionary {-}{}{}Class \discretionary {-}{}{}Index}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\discretionary {-}{}{}Class \discretionary {-}{}{}List}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}\discretionary {-}{}{}Class \discretionary {-}{}{}Documentation}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\discretionary {-}{}{}Edge$<$ \discretionary {-}{}{}G $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}\discretionary {-}{}{}Detailed \discretionary {-}{}{}Description}{3}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}\discretionary {-}{}{}Graph$<$ \discretionary {-}{}{}N, \discretionary {-}{}{}E $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}\discretionary {-}{}{}Node$<$ \discretionary {-}{}{}G $>$ \discretionary {-}{}{}Class \discretionary {-}{}{}Template \discretionary {-}{}{}Reference}{3}{section.2.3}

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1377194771 source:/home/adolfo/Documents/2013-II/AED/LinkedList/main.cpp
+	<iostream>
+	"LinkedList.h"
+
+1377195372 /home/adolfo/Documents/2013-II/AED/LinkedList/LinkedList.h
+	<iostream>
+	"Node.h"
+
+1377194708 /home/adolfo/Documents/2013-II/AED/LinkedList/Node.h
+
